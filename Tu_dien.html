@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="english" placeholder="Input english word">
+<button onclick="translate1()">Translate</button>
+<input id="vietnamese">
+</body>
+</html>
+<script>
+    // function translate1() {
+    //     let English = ["apple", "hello", "name"];
+    //     let Vietnamese = ["quả táo", "xin chào", "tên"];
+    //     let englishWord = document.getElementById('english').value;
+    //     let vietnameseWord;
+    //     for (i = 0; i < English.length; i++) {
+    //         if (English[i] === englishWord) {
+    //             vietnameseWord = Vietnamese[i];
+    //             break;
+    //         } else vietnameseWord="not found";
+    //     }
+    //     document.getElementById("vietnamese").value = vietnameseWord;
+    //  }
+    function translate1() {
+        let English = ["apple", "hello", "name"];
+        let Vietnamese = ["quả táo", "xin chào", "tên"];
+        let englishWord = document.getElementById('english').value;
+        let vietnameseWord = (English.indexOf(englishWord) == -1) ? "not found" : Vietnamese[English.indexOf(englishWord)]
+        document.getElementById("vietnamese").value = vietnameseWord;
+    }
+</script>

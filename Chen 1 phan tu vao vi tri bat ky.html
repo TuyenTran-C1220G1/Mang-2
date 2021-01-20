@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let array = [8, 2, 3, 2, 1];
+    Array.prototype.insert=function insertElementToArray(k,value){
+    for (i = array.length; i > k; i--) {
+        array[i] = array[i - 1];
+    }
+    array[k] = value;
+    //console.log(array);
+    return array;
+    }
+    console.log(array.insert(5,'xxx'));
+    // function isSymmetricalArray(){
+    // let array = [1, 2, 3, 3, 2, 1];
+    // let count = 0;
+    // for (i = 0; i <= array.length/2; i++) {
+    //     if (array[i] != array[array.length - 1 - i]) {count++;}}
+    // if (count == 0) {
+    //     alert('Array is symmetrical')
+    // } else {alert('is not symmetrical array')}
+    // }
+</script>
